@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup</title>
+</head>
+<body>
+    <h1>Inscrigui's a continuació</h1>
+    <form action="" method="post">
+        <label for="name">Nom i cognoms: </label>
+        <input type="text" id="name" name="name" /><br>
+        {% for act in activitats %}
+        <label for="{{ act }}">{{ act }}</label>
+        <input type="checkbox" id= "{{ act }}" name="opcions" value="{{ act }}" /><br>
+        {% endfor %}
+        <!--<label for="opcio2">Activitat 2</label>
+        <input type="checkbox" id= "opcio2" name="opcions" value="activitat2" /><br>-->
+              <!--Es pot canviar lordre de label i input per canviar lordre de les caselles (posar br al final)-->
+
+        <input type="submit" id="send-signup" name="signup" value="Enviar" />
+    </form>  
+</body>
+</html>
